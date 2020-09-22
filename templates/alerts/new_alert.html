@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+  <h1>Create Alert</h1>
+</header>
+<section class="create-item-form">
+<form method="POST">
+  <div class="form-group">
+    <label class="form-control" for="name">Item Name</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Eg. Macbook Pro 16 inch 2020" />
+  </div>
+  <div class="form-group">
+    <label class="form-control" for="item_url">Item URL</label>
+    <input type="text" class="form-control" id="item_url" name="item_url" placeholder="Some Item URL ..." />
+  </div>
+  <div class="form-group">
+    <label class="form-control" for="price_limit">Price Limit</label>
+    <input type="text" class="form-control" id="price_limit" name="price_limit" placeholder="###.##" aria-describedby="plHelp" />
+    <small class="form-text text-muted" id="plHelp">What is the price of the item in ###.## format for you to be notified?</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Create Alert</button>
+</form>
+</section>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+  <h1>Edit Store</h1>
+</header>
+<section class="update-item-form">
+<form method="POST">
+  <div class="form-group">
+    <label class="form-control" for="name">Store Name</label>
+    <input type="text" class="form-control" id="name" name="name" value="{{ store.name }}" />
+  </div>
+  <div class="form-group">
+    <label class="form-control" for="url_prefix">URL Prefix</label>
+    <input type="text" class="form-control" id="url_prefix" name="url_prefix" value="{{ store.url_prefix }}" aria-describedby="upHelp" />
+    <small class="form-text text-muted" id="upHelp">What prefix does the URL start with?</small>
+  </div>
+  <div class="form-group">
+    <label class="form-control" for="tag">HTML Tag Name</label>
+    <input type="text" class="form-control" id="tag" name="tag" value="{{ store.tag }}" aria-describedby="tagHelp" />
+    <small class="form-text text-muted" id="tagHelp">What HTML tag element contains the price info?</small>
+  </div>
+  <div class="form-group">
+    <label class="form-control" for="query">HTML Query</label>
+    <input type="text" class="form-control" id="query" name="query" value="{{ store.query }}" aria-describedby="queryHelp" />
+    <small class="form-text text-muted" id="queryHelp">What attributes are on the element that contains the price info?</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Update Store</button>
+</form>
+</section>
+{% endblock %}

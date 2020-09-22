@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header>
+  <h1>Create Item</h1>
+</header>
+<section class="create-item-form">
+<form method="POST">
+  <div class="form-group">
+    <label class="form-control" for="url">URL</label>
+    <input type="text" class="form-control" id="url" name="url" placeholder="https://..." />
+  </div>
+  <div class="form-group">
+    <label class="form-control" for="tag">Tag</label>
+    <input type="text" class="form-control" id="tag" name="tag" placeholder="span" aria-describedby="tagHelp" />
+    <small class="form-text text-muted" id="tagHelp">What is the HTML tag of the webpage that contains the price of the item?</small>
+  </div>
+  <div class="form-group">
+    <label class="form-control" for="qry">Query</label>
+    <input type="text" class="form-control" id="qry" name="qry" placeholder='{ "id" : "..." }' aria-describedby="qryHelp" />
+    <small class="form-text text-muted" id="qryHelp">What JSON query to use to find the specific tag with the price?</small>
+  </div>
+  <button type="submit" class="btn btn-primary">Create Item</button>
+</form>
+</section>
+{% endblock %}
